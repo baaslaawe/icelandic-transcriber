@@ -16,13 +16,19 @@ class Transcriber():
         """
         self.map_list = []
         for line in mfile:
-            if len(line.replace('\t','')) > 1:
-                sline = line.split('\t')
-                try:
-                    environment = sline[2]
-                except:
-                    environment = ''
-                self.map_list.append((sline[0], sline[1], environment))
+            sline = line.split('\t')
+            try:
+                env_l = sline[2]
+            except IndexError:
+                env_l = ''
+            try:
+                env_r = sline[3]
+            except IndexError:
+                env_r = ''
+            try:
+                self.map_list.append((sline[0],sline[1],env_l,env_r))
+            except IndexError:
+                pass
 
     def transcribe_file(self, ortho_filename):
         self.result = ''
@@ -32,18 +38,13 @@ class Transcriber():
 
     def transcribe_line(self, line):
         line_result = line[:]
-        for ortho, trans, env in self.map_list:
-            envs = re.sub('_+', '_',env.replace(' ',''))
-            try:
-                env_left, env_right = envs.split('_')
-            except:
-                env_left, env_right = '', ''
+        for ortho, trans, env_l, env_r in self.map_list:
             line_result = re.sub('(?<={}){}(?={})'.format(
-                            env_left, ortho, env_right), trans, line_result)
+                            env_l, ortho, env_r), trans, line_result)
         print('{} --> {}'.format(line, line_result))
         return line_result
 
 
 #### Quick, temp lines for testing
-mt = Transcriber('test_mappings.csv')
+mt = Transcriber('test_mappings.txt')
 mt.transcribe_file('test_ortho.txt')
