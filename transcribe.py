@@ -37,7 +37,7 @@ class Transcriber():
                 pass
 
     def replace_sets(self, env):
-        # Remove all input set syntax (spaces, braces, and stragling newlines) and create a list:
+        # Remove all input set syntax (spaces, braces, and straggling newlines) and create a list:
         all_envs = env.replace(' ', '').replace('{', '').replace('}', '').strip().split(',')
         for n,i in enumerate(all_envs):
             if i in self.ph_classes.keys(): # If environment contains a set
