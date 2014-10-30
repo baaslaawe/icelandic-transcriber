@@ -1,11 +1,5 @@
-				
-				
-				
-				
-y	i			Covers ey -> ei as well
-ý	í			
-é	je			
-				
-h	k		v	
-u	ʏ		{C, #}
-	d	{r,s}	{l,n}
+u	Y
+au	Oy
+y	j
+Yj	Yij	*
+gi	ji	*
