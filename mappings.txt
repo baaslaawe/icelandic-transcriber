@@ -1,0 +1,92 @@
+a	ɐ
+á	äu
+au	œy
+e	ɛ
+é	jɛ
+ei	ɛi
+ey	ɛi
+i	ɪ
+y	ɪ
+í	i
+ý	i
+o	ɔ
+ó	ou
+u	ʏ
+ú	u
+æ	äi
+ö	œ
+b	p
+mb	m		[dtsg]
+d	t
+d		[ln]	[gnlks]
+ð	θ		[!voiceless consonants]
+rðn	rn
+gðs	gs
+ff	f
+f	v	[!vowels]	[!vowels]
+f	v	[!vowels]	[!voiced consonants]
+f$	v		
+óf	f		[!vowels]
+fl	pl
+fn	pn
+fnd	mt
+fnt	Mt
+^g	k		[!consonants and aáéoóuúö]
+g	k	[!vowels]	[ln]
+^g	c		(e|i|í|j|y|ý|æ|ei|ey)
+g	ɣ	[!vowels]	(a|u|ð|l|r)
+g$	ɣ		
+g	x		[st]
+g	j	[!vowels]	[ji]
+g		[áóú]	[au]
+gj	c
+hj	ç
+hl	L
+hr	R
+hv	Kv
+^k	K		[!consonants and aáéoóuúö]
+^k	C		(e|i|í|j|y|ý|æ|ei|ey)
+kt	xt
+^kj	C
+kj	c
+kk	8
+l	L		$
+l	L		[!voiceless consonants]
+ll	tl
+m	M		[!voiceless consonants]
+m	M	[!voiceless consonants]
+ng	ŋg
+nk	ŋk
+n	N		[!voiceless consonants]
+n	N	[!voiceless consonants]	
+nn	tn	[!accented vowels or diphthongs]
+^p	P		
+p	p	[!voiceless sounds]	
+p	f		[skt]
+pp	0
+^r	r
+r	r	[!vowels]	[!vowels]
+r	R	[!voiceless consonants]	
+r	R		[!voiceless consonants]
+r$	R
+rl	rtL
+rn	rtN
+s	s
+sl	stL
+sn	stN
+^t	T
+t	t	[!voiceless sounds]	
+tt	5
+v	v
+x	xs
+þ	θ
+
+
+
+
+ɐŋ	äuŋ	*
+äːŋ	äuŋ	*
+ɛŋ	ɛiŋ	*
+eɛŋ	ɛiŋ	*
+ʏŋ	uŋ	*
+œŋ	œyŋ	*

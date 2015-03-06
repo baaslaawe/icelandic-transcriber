@@ -1,0 +1,9 @@
+[!vowels]	(a|á|au|e|é|ei|ey|i|y|í|ý|o|ó|u|ú|æ|ö)
+[!voiced consonants]	(??)
+[!voiceless consonants]	(??)
+[!consonants and aáéoóuúö]	(??)
+[!accented vowels or diphthongs]	(??)
+[!voiceless sounds]	(??)
+
+
+[!hypothetical phone segment class]	(??)	*
