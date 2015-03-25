@@ -50,10 +50,11 @@ class Phonetizer():
         self.phone_maps.sort(key=lambda x: len(x[0]))
         self.phone_maps.reverse()
 
-    def translate_ortho_classes(self, expression):
-        for c in self.ortho_classes:
-            expression = expression.replace(c, self.ortho_classes[c])
-        return expression
+    def translate_classes(self, expression):
+        if expression in self.ortho_classes:
+            return self.ortho_classes[expression]
+        else:
+            return expression
 
     def read_wfile(self, ttfilename):
         with open(ttfilename) as ttfile:
@@ -68,20 +69,39 @@ class Phonetizer():
 
     def phonetize(self, ortho):
         # go from ortho to initial transcription
+        print(ortho)
+        converted_indices = set()
+        transcribed = ['']*len(ortho)
         for om in self.ortho_maps:
             try:
-                lookbehind = '(?<={})'.format(om[2])
+                lookbehind = '(?<={})'.format(self.translate_classes(om[2]))
             except IndexError:
                 lookbehind = ''
             try:
-                lookahead = '(?={})'.format(om[3])
+                lookahead = '(?={})'.format(self.translate_classes(om[3]))
             except IndexError:
                 lookahead = ''
-            ortho = re.sub(lookbehind+om[0]+lookahead, om[1], ortho)
+            matches = re.finditer(lookbehind+om[0]+lookahead, ortho)
+            print(om)
+            print(lookbehind+om[0]+lookahead)
+            for m in matches:
+                for i in range(m.start(), m.end()):
+                    if i in converted_indices:
+                        continue
+                converted_indices = converted_indices.union(set(range(m.start(), m.end())))
+                transcribed[m.start()] = om[1]
+                print()
+                print(ortho)
+                print(transcribed)
+        for i,s in enumerate(ortho):
+            if i not in converted_indices:
+                transcribed[i] = s
+        transcribed = ''.join(transcribed)
 
-        print(ortho)
+        print('x')
+        print(transcribed)
         # apply "phonology"
-        output = ortho
+        output = transcribed
         for pm in self.phone_maps:
             output = re.sub(pm[0], pm[1], output)
             

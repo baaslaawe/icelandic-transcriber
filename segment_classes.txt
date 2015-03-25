@@ -1,9 +1,9 @@
 [!vowels]	(a|á|au|e|é|ei|ey|i|y|í|ý|o|ó|u|ú|æ|ö)
-[!voiced consonants]	(??)
-[!voiceless consonants]	(??)
-[!consonants and aáéoóuúö]	(??)
-[!accented vowels or diphthongs]	(??)
-[!voiceless sounds]	(??)
+[!voiced consonants]	(b|d|ð|g|j|l|m|n|r|v)
+[!voiceless consonants]	(f|h|k|p|s|t|x)
+[!consonants and aáéoóuúö]	(b|d|ð|g|j|l|m|n|r|v|f|h|k|p|s|t|x|a|á|é|o|ó|u|ú|ö)
+[!accented vowels or diphthongs]	(á|au|é|ei|ey|í|ý|ó|ú)
+[!voiceless sounds]	(f|h|k|p|s|t|x)
 
 
 [!hypothetical phone segment class]	(??)	*
